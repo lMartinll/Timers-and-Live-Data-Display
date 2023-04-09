@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+    This is my UAT Space Page
+    It was created in my CSC102 class from Spring 2023
+    this is for wk4 blastoff assignment
+
+    created by:
+    Martin Rios
+    MARRIOS1@uat.edu
+-->
+<html>
+
+<head>
+    <!--This is the head,
+    It is where all the behind the background stuff goes on-->
+    <title>
+        Prof. Prater's UATSpace page
+    </title>
+    <script src="code.js"></script>
+    <script src="class.js"></script>
+    <script src="dataLoader.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        var theTime = new Date();
+        var timeInterval = 5000;
+        var lastIteration = 0;
+        var running = true;
+        var index = 0;
+        var timer;
+        var data = getData();
+    </script>
+    <style>
+        body {
+            background-color: rgb(105, 128, 141);
+        }
+    </style>
+</head>
+<body>
+    <img src="UAT_Space.jpg">
+    <br>
+    <br>
+    <!--
+        Audio code begins here (NOTE: i was unable to have the audio automatically play upon page load due to google restrictions)
+    -->
+    <img id="mutebutton" src="soundOFF.png" onclick="muteFun()">
+    <audio id="backgroundaudio" loop>
+        <source src="spacesound.mp3" type="audio/mpeg">
+    </audio>
+    <!--
+        Audio code ends here
+    -->
+    <h1 style="color: rgb(15, 15, 153)">
+        Welcome to the UAT Space Page
+    </h1>
+    <br>
+    <table id="data" border="2" width="70%">
+        <col style="width: 35%">
+        <col style="width: 35%">
+        <thead>
+            <th>Data Type</th>
+            <th>Reading</th>
+        </thead>
+        <tr id="time_seconds">
+        <tr id="latitude">
+        <tr id="longitude">
+        <tr id="gps_altitude">
+        <tr id="bmp_altitude">
+        <tr id="bmp_pressure">
+        <tr id="bmp_temperature">
+        <tr id="dig_temperature">
+        <tr id="css_temperature">
+        <tr id="css_eco2">
+        <tr id="css_tvoc">
+        <tr id="uv">
+        <tr id="accelx">
+        <tr id="accely">
+        <tr id="accelz">
+        <tr id="magneticx">
+        <tr id="magneticy">
+        <tr id="magneticz">
+        <tr id="gyrox">
+        <tr id="gyroy">
+        <tr id="gyroz">
+    </table>
+    <br>
+    <br>
+    The current Time is: <div id="clockTime"> Press Start to display current time</div><br>
+    <br>
+    <br>
+    <button class="startbutton" id="startButton" onclick="startFun();">Start</button>
+    <button class="stopbutton" id="stopButton" onclick="stopFun();">Stop</button>
+    <br>
+    <br>
+    <h2>Craps game</h2>
+    <div id="die1Res">Die 1 Result</div><br>
+    <div id="die2Res">Die 2 Result</div><br>
+    <div id="diceSum">Sum of Die 1 and Die 2</div><br>
+    <div id="gameRes">Game Result</div><br>
+    <button onclick="playCraps()">Play Craps!</button><br>
+    <br>
+    <div class="winClass">wins<br></div>
+    <div id="winsRes">0</div><br>
+    <br>
+    <div class="lossClass">loses<br></div>
+    <div id="losesRes">0</div><br>
+    <br>
+    <div class="drawClass">draws<br></div>
+    <div id="drawsRes">0</div><br>
+    <br>
+    <h3>Sandbox</h3>
+    <br>
+    <div id="sandboxText">Text to play with</div>
+    <script>
+        var phunText1 = "This is my ";
+        var phunText2 = "phun text.";
+        var i = 6;
+        var j = 7;
+        var exp = 6 ** 2;
+        exp--;
+        evenTest = exp % 2;
+    </script>
+    <!--work with the class stuff-->
+    <script>
+        //define some objects
+        var smSquare = new Rectangle(5, 5, 1, 7);
+        var lgRect = new Rectangle(12, 17, 2, 6);
+    </script>
+<br>
+<br>
+    <Button>Calculate smSquareArea</Button>
+</body>
+
+</html>
